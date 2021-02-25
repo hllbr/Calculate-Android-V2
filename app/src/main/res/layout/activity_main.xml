@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/numberText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:hint="ENTER NUMBER"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/numberText2"
+        app:layout_constraintStart_toStartOf="@+id/numberText2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numberText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="ENTER NUMBER"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/numberText1" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="217dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="238dp"
+        android:gravity="center"
+        android:shadowColor="#B11E1E"
+        android:text="Result : 0"
+        android:textColor="#1FC826"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="62dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberText2">
+
+        <Button
+            android:id="@+id/toplaText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="topla"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/cıkarText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="cıkar"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="101dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout5">
+
+        <Button
+            android:id="@+id/carpText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="carp"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/bölText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="bol"
+            android:text="/" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
